@@ -175,10 +175,11 @@ footer {
 @media only screen and (max-width: 800px) {
     body {
       background-color: lightblue;
+      width: 750px;
     }
 
-    .container {
-        width: 800px;
+    .bodyImg {
+        width: 700px;
     }
 
     .navigationBar {
