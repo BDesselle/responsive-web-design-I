@@ -66,45 +66,39 @@ h1, h2, h3, h4, h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 .container { 
-	height: 2000px;
-	width: 880px;
-	margin: 0 auto;
+	height: 1400px;
+    width: 880px;
 }
-
-
-
-
-
-
 
 /*Navigation===============================================*/
 .navigationBar {
 	height: 60px;
-	width: 880px;
+    width: 800px;
+    margin: 20px 40px 20px;
 	display: flex;
 	justify-content: space-between;
 }
 
 .navigationBar nav {
-	align-self: center;
+    align-self: center;
 }
 
 .navigationBar img {
 	align-self: center;
     justify-self: flex-end;
-    margin: 40px 0px 40px;
 }
 
 .navigationBar nav a {
 	justify-self: flex-start;
-	margin: 0px 55px 0px 0px;
+    margin-right: 45px;
 	color: grey;
 }
 
 /*Header==================================================*/
 header {
-	width: 880px;
-	height: 450px;
+	width: 800px;
+    height: 450px;
+    margin: 0px 40px 0px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -116,32 +110,43 @@ header {
 	text-align: center;
 }
 
-.header button{
-	border: 1px solid black;
-	border-radius: 5px;
+.header button {
+    border: 1px solid black;
+    background-color: white;
 	width: 155px;
 	height: 30px;
 }
 
 /*TopContent===============================================*/
 .topContent {
-	width: 880px;
-	height: 160px;
+    width: 800px;
+    height: 160px;
+    margin: 0px 40px 0px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
+.leftDiv {
+    margin-right: 10px;
+}
+
 /*BodyIMG==================================================*/
 .bodyImg {
-	display: flex;
+    display: flex;
+    margin: 0px 40px 0px;
+}
+
+.middle-img {
+    width: 800px;
 }
 
 /*BottomContent============================================*/
 
 .bottomContent {
-	width: 880px;
-	height: 200px;
+	width: 800px;
+    height: 200px;
+    margin: 0px 40px 0px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -153,42 +158,53 @@ header {
 
 /*Contact=================================================*/
 .contactContent {
-	width: 880px;
-	height: 200px;
+	width: 800px;
+    height: 200px;
+    margin: 0px 40px 0px;
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
-	margin: 40px 0px 0px 0px;
 }
 
 /*Footer==================================================*/
 footer {
+    width: 800px;
+    margin: 0px 40px 0px;
 	justify-content: center;
 	align-content: flex-end;
 	display: flex;
 	color: grey;
 }
 
+hr {
+    width: 800px;
+}
+
 /*Media Query===========================================*/
 
 /*Tablets*/
 @media only screen and (max-width: 800px) {
-    body {
-      background-color: lightblue;
-      width: 750px;
+
+    .container {
+        height: 1400px;
+        width: 800px;
     }
 
     .bodyImg {
-        width: 700px;
+        width: 750px;
     }
 
     .navigationBar {
         height: auto;
         display: flex;
         flex-direction: column;
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 750px;
     }
 
     .navigationBar img {
+        margin: 30px 0px 30px;
         order: 1;
     }
 
@@ -200,8 +216,6 @@ footer {
         color: grey;
     }
 
-    /**/
-
     header img {
         display: none;
     }
@@ -211,7 +225,14 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 60px 0px 60px;
+        width: 750px;
+        margin: 60px 25px 60px 25px;
+    }
+
+    hr {
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 750px;
     }
     
     .header h1 {
@@ -227,12 +248,33 @@ footer {
         height: 30px;
     }
 
-    /**/
-
     .topContent {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 750px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .bottomContent {
+        width: 750px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .bodyImg {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .middle-img {
+        width: 750px;
+    }
+
+    .contactContent {
+        width: 750px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .leftDiv {
@@ -244,12 +286,112 @@ footer {
         width: 370px;
         margin-right: 20px;
     }
-  }
-/*Mobile*/
-@media only screen and (max-width: 500px) {
-body {
-    background-color: pink;
+
+    footer {
+        width: 750px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
+    .header button {
+        border-radius: 0px;
+    }
+}
 
+
+/*Mobile*/
+@media only screen and (max-width: 500px) {
+    .container {
+    width: 500px;
+    height: 2000px;
+    }
+
+    .navigationBar {
+        width: 500px;
+        margin: 0px;
+    }
+
+    .navigationBar img {
+        height: 35px;
+        margin: 20px 0px 20px;
+        order: 1;
+    }
+
+    .navigationBar nav {
+        text-align: center;
+    }
+
+    .navigationBar nav a {
+        color: grey;
+        display: block;
+        width: 500px;
+        height: 56px;
+        font-size: 20px;
+        margin: 0px 0px 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid black;
+    }
+
+    .header {
+        height: 380px;
+        width: 500px;
+        margin: 0px 0px 0px;
+        border-top: 1px solid black;
+    }
+
+    hr {
+        width: 458px;
+        margin: 0px 20px 0px;
+        border: 1px solid black;
+    }
+
+    .topContent {
+        width: 460px;
+        height: 300px;
+        margin: 0px 20px 0px;
+        display: block;
+    }
+
+    .topContent div {
+        width: 460px;
+        margin: 50px 0px 10px;
+    }
+
+    .bodyImg {
+        width: 500px;
+        margin: 0px;
+    }
+
+    .middle-img {
+        width: 460px;
+        margin: 0px 20px 0px;
+    }
+
+    .bottomContent {
+        height: 440px;
+        width: 460px;
+        margin: 0px 20px 0px;
+        display: block;
+    }
+
+    .bottomContent div {
+        width: 460px;
+        margin: 30px 0px 60px;
+    }
+
+    .contactContent {
+        height: 175px;
+        width: 460px;
+        margin: 30px 20px 0px;
+    }
+
+    footer {
+        width: 460px;
+        margin: 0px 20px 0px;
+    }
+
+    .header button {
+        border-radius: 0px;
+    }
 }
